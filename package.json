@@ -1,0 +1,40 @@
+{
+    "name": "maincolorextractor",
+    "description": "",
+    "version": "0.1.0",
+    "engines": {
+        "sketch": ">=49.0"
+    },
+    "skpm": {
+        "name": "MainColorExtractor",
+        "manifest": "src/manifest.json",
+        "main": "maincolorextractor.sketchplugin",
+        "assets": [
+            "assets/**/*"
+        ],
+        "sketch-assets-file": "sketch-assets/icons.sketch",
+        "resources": [
+            "resources/ui.js"
+        ]
+    },
+    "scripts": {
+        "build": "skpm-build",
+        "watch": "skpm-build --watch",
+        "start": "skpm-build --watch --run",
+        "postinstall": "npm run build && skpm-link"
+    },
+    "devDependencies": {
+        "@skpm/builder": "^0.7.0",
+        "@skpm/extract-loader": "^2.0.3",
+        "css-loader": "^5.2.6",
+        "html-loader": "^1.3.2",
+        "sketch-module-web-view": "^3.5.1",
+        "style-loader": "^3.0.0"
+    },
+    "dependencies": {
+        "clipboard": "^2.0.8",
+        "get-pixels": "^3.3.2",
+        "quantize": "^1.0.2"
+    },
+    "author": "zhangheng <zhangheng379@163.com>"
+}

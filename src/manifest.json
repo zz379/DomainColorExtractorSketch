@@ -1,0 +1,27 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+    "name": "DomainColor",
+    "identifier": "com.zz379.domainColorExtractor",
+    "version": "1.0.1",
+    "description": "提取图片主色",
+    "authorEmail": "1104197791@qq.com",
+    "author": "zz379",
+    "icon": "icon.png",
+    "commands": [{
+        "name": "Domain Color",
+        "identifier": "domaincolor.get-image-data",
+        "script": "./my-command.js",
+        "handlers": {
+            "run": "onRun",
+            "setUp": "onSetUp",
+            "tearDown": "onTearDown"
+        }
+    }],
+    "menu": {
+        "title": "DomainColor",
+        "items": [
+            "domaincolor.get-image-data"
+        ],
+        "isRoot": true
+    }
+}
